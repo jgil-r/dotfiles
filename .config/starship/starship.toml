@@ -1,0 +1,22 @@
+add_newline = false
+
+format = '\[$directory\]$git_branch\$ '
+
+[line_break]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[directory]
+format = "$path"
+truncation_symbol = "~/"
+truncate_to_repo = false
+style = "white"
+
+[git_branch]
+format = '\([$branch]($style)\)'
+style = "bold red"
+
+[character]
+disabled = true
