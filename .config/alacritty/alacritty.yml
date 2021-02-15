@@ -1,11 +1,16 @@
 env:
-  TERM: xterm-256color
+  TERM: alacritty
   WINIT_X11_SCALE_FACTOR: "1.0"
 
 window:
   padding:
     x: 5
     y: 5
+
+  decorations: none
+  startup_mode: Maximized
+
+background_opacity: 0.85
 
 # Font configuration
 font:
@@ -64,4 +69,5 @@ live_config_reload: true
 shell:
   program: /bin/zsh
   args:
+    - --login
     - --login
