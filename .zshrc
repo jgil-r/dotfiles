@@ -1,6 +1,6 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -15,8 +15,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
-alias vim="nvim"
+alias vim="nvim-nightly"
 alias l="ls -la"
 
 alias zs="source ~/.zshrc"
