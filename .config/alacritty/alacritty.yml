@@ -7,10 +7,10 @@ window:
     x: 5
     y: 5
 
-  decorations: none
+  #decorations: none
   startup_mode: Maximized
 
-background_opacity: 0.85
+background_opacity: 1.0
 
 # Font configuration
 font:
