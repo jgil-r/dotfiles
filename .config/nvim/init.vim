@@ -74,6 +74,7 @@ nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>
 nnoremap <leader>vsd :lua vim.lsp.util.show_line_diagnostics(); vim.lsp.util.show_line_diagnostics()<CR>
 
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+let g:completion_timer_cycle = 10
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -87,3 +88,5 @@ let g:prettier#autoformat_require_pragma = 0
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>ll <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>bb <cmd>lua require('telescope.builtin').buffers()<cr>
+
+vnoremap <leader>y "+y
