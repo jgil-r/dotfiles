@@ -1,0 +1,30 @@
+# i3status configuration file.
+
+general {
+        colors = false
+        interval = 5
+}
+
+order += "wireless _first_"
+order += "battery all"
+order += "volume master"
+order += "tztime local"
+
+wireless _first_ {
+        format_up = "WIFI: %essid"
+        format_down = "WIFI: - "
+}
+
+battery all {
+        format = "%status %percentage"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "pulse:1"
+}
+
+tztime local {
+        format = "%a %B %d %I:%M%p"
+}
