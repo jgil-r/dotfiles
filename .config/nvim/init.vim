@@ -36,6 +36,7 @@ set termguicolors
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'

@@ -15,16 +15,16 @@ background_opacity: 0.85
 # Font configuration
 font:
   normal:
-    family: SF Mono
+    family: JetBrains Mono
     style: Regular
   bold:
-    family: SF Mono
+    family: JetBrains Mono
     style: Bold
   italic:
-    family: SF Mono
+    family: JetBrains Mono
     style: Italic
   bold_italic:
-    family: SF Mono
+    family: JetBrains Mono
     style: Bold Italic
 
   size: 11.0

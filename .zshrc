@@ -1,4 +1,5 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export PATH=$PATH:/usr/local/go/bin
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
