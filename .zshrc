@@ -19,7 +19,7 @@ compinit
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
-alias vim="nvim"
+alias vim="nvim-nightly"
 alias l="ls -la"
 
 alias zs="source ~/.zshrc"
@@ -27,20 +27,11 @@ alias zz="vim ~/.zshrc"
 alias nn="vim ~/.config/nvim/init.vim"
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
-alias ii="vim ~/.config/i3/config"
-alias is="vim ~/.config/i3status/config"
-alias xx="vim ~/.xmonad/xmonad.hs"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
 alias ta="tmux -u -f $TMUX_CONFIG attach"
 alias tt="vim $TMUX_CONFIG"
-
-alias cp="cp -v"
-alias mv="mv -v"
-alias mkdir="mkdir -v"
-alias rmdir="rmdir -v"
-alias rmr="rm -rfvi"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
