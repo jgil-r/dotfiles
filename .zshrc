@@ -34,6 +34,12 @@ alias tn="tmux -u -f $TMUX_CONFIG new"
 alias ta="tmux -u -f $TMUX_CONFIG attach"
 alias tt="vim $TMUX_CONFIG"
 
+alias cp="cp -v"
+alias mv="mv -v"
+alias mkdir="mkdir -v"
+alias rmdir="rmdir -v"
+alias rmr="rm -rfvi"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
