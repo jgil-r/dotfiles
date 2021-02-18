@@ -29,6 +29,7 @@ alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
 alias ii="vim ~/.config/i3/config"
 alias is="vim ~/.config/i3status/config"
+alias xx="vim ~/.xmonad/xmonad.hs"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
