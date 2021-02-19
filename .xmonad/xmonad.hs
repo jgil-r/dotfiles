@@ -48,7 +48,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_b     ), spawn myBrowser)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn dmenu)
+    , ((modm,               xK_m     ), spawn dmenu)
 
     -- close focused window
     , ((modm,               xK_x     ), kill)
@@ -67,12 +67,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Move focus to the next window
     , ((modm,               xK_j     ), windows W.focusDown)
-
-    -- Move focus to the previous window
-    , ((modm,               xK_k     ), windows W.focusUp  )
-
-    -- Move focus to the master window
-    , ((modm,               xK_m     ), windows W.focusMaster  )
 
     -- Swap the focused window and the master window
     , ((modm .|. shiftMask, xK_Return), windows W.swapMaster)
@@ -170,15 +164,10 @@ myLayout = avoidStruts $ mySpacing 10 (tiled ||| Mirror tiled ||| Full)
 ------------------------------------------------------------------------
 
 -- Window rules:
--- To find the property name associated with a program, use
--- > xprop | grep WM_CLASS
--- and click on the client you're interested in.
---
--- To match on the WM_NAME, you can use 'title' in the same way that
--- 'className' and 'resource' are used below.
 myManageHook = composeAll
-    [ className =? "Gufw.py"        --> doFloat
-    , resource  =? "desktop_window" --> doIgnore ]
+    [ className =? "Gufw.py"            --> doFloat
+    , className =? "Blueman-manager"    --> doFloat
+    , resource  =? "desktop_window"     --> doIgnore ]
 
 ------------------------------------------------------------------------
 -- Event handling

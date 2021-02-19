@@ -6,7 +6,7 @@ Config { font = "xft:JetBrains Mono:weight=bold:pixelsize=12:antialias=true:hint
        , fgColor = "#c5c8c6"
        , alpha = 255
        , position = Top
-       , textOffset = -1
+       , textOffset = 15
        , iconOffset = -1
        , lowerOnStart = True
        , pickBroadest = False
@@ -16,11 +16,11 @@ Config { font = "xft:JetBrains Mono:weight=bold:pixelsize=12:antialias=true:hint
        , allDesktops = True
        , overrideRedirect = True
        , commands = [ Run StdinReader 
-                    , Run Wireless "wlp3s0" [ "-t", "<fc=#cc6666><fn=1>直</fn></fc> <essid>" ] 10
+                    , Run Wireless "wlp3s0" [ "-t", "<fc=#81a2be><fn=1>直</fn></fc> <essid>" ] 10
                     , Run Date "%a %b %_d %I:%M%p" "date" 10
                     , Run BatteryP ["BAT1"]
                         ["-t", "<acstatus> <left>%"
-                        , "--", "-i", "<fc=#cc6666><fn=1></fn></fc>", "-O", "<fc=#cc6666><fn=1></fn></fc>", "-o", "<fc=#cc6666><fn=1></fn></fc>"
+                        , "--", "-i", "<fc=#00CC9C><fn=1></fn></fc>", "-O", "<fc=#00CC9C><fn=1></fn></fc>", "-o", "<fc=#00CC9C><fn=1></fn></fc>"
                         ] 10
                     , Run Com "lux" ["-G"] "" 5
                     ]
@@ -29,7 +29,7 @@ Config { font = "xft:JetBrains Mono:weight=bold:pixelsize=12:antialias=true:hint
        , template = " <icon=/home/chuy/.config/xmobar/haskell.xpm/> \
                       \ %StdinReader% }\
                     \{ %battery% |\
-                    \ <fc=#cc6666><fn=1>盛</fn></fc> %lux% |\
+                    \ <fc=#f0c674><fn=1>盛</fn></fc> %lux% |\
                     \ %wlp3s0wi% |\
                     \ <fc=#cc6666>%date%</fc> "
        }
