@@ -1,0 +1,31 @@
+Config { font = "xft:JetBrains Mono:pixelsize=12:antialias=true:hinting=true"
+       , additionalFonts = []
+       , borderColor = "#1d1f21"
+       , border = TopB
+       , bgColor = "#1d1f21"
+       , fgColor = "#c5c8c6"
+       , alpha = 255
+       , position = Top
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [ Run StdinReader 
+                    , Run Wireless "wlp3s0" [ "-t", "WIFI: <essid>" ] 10
+                    , Run Date "%a %b %_d %I:%M%p" "date" 10
+                    , Run BatteryP ["BAT1"]
+                        ["-t", "BAT: <left>%"] 10
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " <icon=/home/chuy/.xmonad/icons/xmonad_xpm_haskell_20.xpm/> \
+                      \ %StdinReader% }\
+                    \{ %battery% |\
+                    \ %wlp3s0wi% |\
+                    \ <fc=#b5bd68>%date%</fc> "
+       }
