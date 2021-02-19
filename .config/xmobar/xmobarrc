@@ -1,5 +1,5 @@
-Config { font = "xft:JetBrains Mono:pixelsize=12:antialias=true:hinting=true"
-       , additionalFonts = []
+Config { font = "xft:JetBrains Mono:weight=bold:pixelsize=12:antialias=true:hinting=true"
+       , additionalFonts = ["xft:Hack Nerd Font Mono:pixelsize=14:antialias=true:hinting=true"]
        , borderColor = "#1d1f21"
        , border = TopB
        , bgColor = "#1d1f21"
@@ -16,16 +16,20 @@ Config { font = "xft:JetBrains Mono:pixelsize=12:antialias=true:hinting=true"
        , allDesktops = True
        , overrideRedirect = True
        , commands = [ Run StdinReader 
-                    , Run Wireless "wlp3s0" [ "-t", "WIFI: <essid>" ] 10
+                    , Run Wireless "wlp3s0" [ "-t", "<fc=#cc6666><fn=1>直</fn></fc> <essid>" ] 10
                     , Run Date "%a %b %_d %I:%M%p" "date" 10
                     , Run BatteryP ["BAT1"]
-                        ["-t", "BAT: <left>%"] 10
+                        ["-t", "<acstatus> <left>%"
+                        , "--", "-i", "<fc=#cc6666><fn=1></fn></fc>", "-O", "<fc=#cc6666><fn=1></fn></fc>", "-o", "<fc=#cc6666><fn=1></fn></fc>"
+                        ] 10
+                    , Run Com "lux" ["-G"] "" 5
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " <icon=/home/chuy/.xmonad/icons/xmonad_xpm_haskell_20.xpm/> \
+       , template = " <icon=/home/chuy/.config/xmobar/haskell.xpm/> \
                       \ %StdinReader% }\
                     \{ %battery% |\
+                    \ <fc=#cc6666><fn=1>盛</fn></fc> %lux% |\
                     \ %wlp3s0wi% |\
-                    \ <fc=#b5bd68>%date%</fc> "
+                    \ <fc=#cc6666>%date%</fc> "
        }

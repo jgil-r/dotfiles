@@ -4,6 +4,7 @@
 
 import XMonad
 import Data.Monoid
+import Graphics.X11.ExtraTypes.XF86
 import System.Exit
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, wrap, xmobarPP, xmobarColor, shorten, PP(..))
 import XMonad.Hooks.ManageDocks
@@ -30,7 +31,7 @@ myBorderWidth   = 2
 
 myModMask       = mod4Mask
 
-myWorkspaces    = ["terminal","web","other"] ++ map show [4..9]
+myWorkspaces    = ["1","2","3"] ++ map show [4..9]
 
 myNormalBorderColor  = "#1d1f21"
 myFocusedBorderColor = "#333333"
@@ -102,6 +103,16 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Restart xmonad
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
+
+    -- Brightness control (lux)
+    , ((0, xF86XK_MonBrightnessUp), spawn "lux -a 10%")
+    , ((0, xF86XK_MonBrightnessDown), spawn "lux -s 10%")
+
+    -- Volume control pactl
+    , ((0, xF86XK_AudioMute), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
+    , ((0, xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume @DEFAULT_SINK@ -10%")
+    , ((0, xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume @DEFAULT_SINK@ +10%")
+
     ]
     ++
 
@@ -215,10 +226,10 @@ main = do
         handleEventHook    = myEventHook,
         logHook            = myLogHook <+> dynamicLogWithPP xmobarPP
                                 { ppOutput = \x -> hPutStrLn xmproc x
-                                , ppCurrent = xmobarColor "#b5bd68" "" . wrap "[" "]" -- Current workspace in xmobar
+                                , ppCurrent = xmobarColor "#cc6666" "" . wrap "[" "]" -- Current workspace in xmobar
                                 , ppVisible = xmobarColor "#c5c8c6" ""
                                 , ppTitle = xmobarColor "#c5c8c6" "" . shorten 60
-                                , ppUrgent = xmobarColor "#cc6666" "" . wrap "[" "]"
+                                , ppUrgent = xmobarColor "#c5c8c6" "" . wrap "[" "]"
                                 , ppOrder  = \(ws:_:t:ex) -> [ws]++ex++[t]
                                 },
         startupHook        = myStartupHook
