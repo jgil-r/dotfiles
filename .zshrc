@@ -1,5 +1,6 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/bin/brave
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -25,6 +26,7 @@ alias zz="vim ~/.zshrc"
 alias nn="vim ~/.config/nvim/init.vim"
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
+alias ii="vim ~/.i3/config"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
