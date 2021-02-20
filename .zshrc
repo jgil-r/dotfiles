@@ -1,6 +1,6 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/usr/bin/brave
+export BROWSER="/usr/bin/brave"
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
