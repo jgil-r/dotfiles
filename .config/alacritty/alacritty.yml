@@ -67,4 +67,3 @@ shell:
   program: /bin/zsh
   args:
     - --login
-    - --login
