@@ -1,8 +1,7 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export PATH=$PATH:/usr/local/go/bin
-export BROWSER="/usr/bin/brave"
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -26,7 +25,7 @@ alias zz="vim ~/.zshrc"
 alias nn="vim ~/.config/nvim/init.vim"
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
-alias ii="vim ~/.i3/config"
+alias xx="vim ~/.xmonad/xmonad.hs"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
