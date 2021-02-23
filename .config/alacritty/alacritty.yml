@@ -1,11 +1,12 @@
 env:
   TERM: alacritty
-  WINIT_X11_SCALE_FACTOR: "1.0"
+  #WINIT_X11_SCALE_FACTOR: "1.0"
 
 window:
   padding:
     x: 5
     y: 5
+  decorations: none
 
 background_opacity: 0.85
 
