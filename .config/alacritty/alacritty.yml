@@ -6,6 +6,7 @@ window:
   padding:
     x: 5
     y: 5
+
   decorations: none
 
 background_opacity: 0.85

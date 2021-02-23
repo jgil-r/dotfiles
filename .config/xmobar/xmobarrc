@@ -1,0 +1,32 @@
+Config { font = "xft:JetBrains Mono:weight=bold:pixelsize=12:antialias=true:hinting=true"
+       , additionalFonts = ["xft:FiraMono Nerd Font:pixelsize=14:antialias=true:hinting=true"]
+       , borderColor = "#1d1f21"
+       , border = TopB
+       , bgColor = "#1d1f21"
+       , fgColor = "#8abeb7"
+       , alpha = 255
+       , position = Top
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [ Run StdinReader
+                    , Run Date "%a %b %_d %I:%M%p" "date" 10
+                    , Run BatteryP ["BAT1"]
+                        ["-t", "<acstatus><left>%"
+                        , "--"
+                        , "-O", "<fc=#8abeb7><fn=1> </fn></fc>"
+                        , "-o", "<fc=#8abeb7><fn=1> </fn></fc>"
+                        , "-i", "<fc=#8abeb7><fn=1> </fn></fc>"
+                        ] 10
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " <fc=#ffffff><fn=1> </fn></fc> %StdinReader% }\
+                    \{ %battery% | <fc=#f0c674>%date%</fc> "
+       }
