@@ -17,16 +17,17 @@ Config { font = "xft:JetBrains Mono:weight=bold:pixelsize=12:antialias=true:hint
        , overrideRedirect = True
        , commands = [ Run StdinReader
                     , Run Date "%a %b %_d %I:%M%p" "date" 10
+                    , Run Wireless "wlp3s0" ["-t", "<fc=#81a2be><fn=1> </fn></fc> <ssid>"] 10
                     , Run BatteryP ["BAT1"]
                         ["-t", "<acstatus><left>%"
                         , "--"
-                        , "-O", "<fc=#f0c674><fn=1> </fn></fc>"
-                        , "-o", "<fc=#f0c674><fn=1> </fn></fc>"
-                        , "-i", "<fc=#f0c674><fn=1> </fn></fc>"
+                        , "-O", "<fc=#81a2be><fn=1> </fn></fc>"
+                        , "-o", "<fc=#81a2be><fn=1> </fn></fc>"
+                        , "-i", "<fc=#81a2be><fn=1> </fn></fc>"
                         ] 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
        , template = " <fc=#ffffff><fn=1> </fn></fc> %StdinReader% }\
-                    \{ %battery% | <fc=#f0c674>%date%</fc> "
+                    \{ %wlp3s0wi% | %battery% | <fc=#f0c674>%date%</fc> "
        }
