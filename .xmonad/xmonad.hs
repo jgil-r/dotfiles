@@ -48,6 +48,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch browser
     , ((modm              , xK_b     ), spawn "brave-browser")
 
+    -- launch blueman
+    , ((modm              , xK_o     ), spawn "blueman-manager")
+
     -- launch dmenu
     , ((modm,               xK_p     ), spawn myDmenu)
 

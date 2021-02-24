@@ -1,5 +1,6 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export PATH=$PATH:/usr/local/go/bin
+export BAT_THEME="OneHalfDark"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
