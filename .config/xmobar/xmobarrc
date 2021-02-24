@@ -20,9 +20,9 @@ Config { font = "xft:JetBrains Mono:weight=bold:pixelsize=12:antialias=true:hint
                     , Run BatteryP ["BAT1"]
                         ["-t", "<acstatus><left>%"
                         , "--"
-                        , "-O", "<fc=#8abeb7><fn=1> </fn></fc>"
-                        , "-o", "<fc=#8abeb7><fn=1> </fn></fc>"
-                        , "-i", "<fc=#8abeb7><fn=1> </fn></fc>"
+                        , "-O", "<fc=#f0c674><fn=1> </fn></fc>"
+                        , "-o", "<fc=#f0c674><fn=1> </fn></fc>"
+                        , "-i", "<fc=#f0c674><fn=1> </fn></fc>"
                         ] 10
                     ]
        , sepChar = "%"
