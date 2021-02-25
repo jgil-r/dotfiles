@@ -4,10 +4,8 @@ env:
 
 window:
   padding:
-    x: 5
+    x: 0
     y: 5
-
-  #decorations: none
 
 background_opacity: 0.85
 
