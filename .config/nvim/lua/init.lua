@@ -36,7 +36,6 @@ require('el').setup {
       builtin.tail_file,
       sections.split,
       builtin.line, '/', builtin.number_of_lines,  ':', builtin.column, ' ',
-      builtin.filetype,
     }
   end
 }
