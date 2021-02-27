@@ -3,6 +3,7 @@ export PATH=$PATH:/usr/local/go/bin
 export BAT_THEME="OneHalfDark"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -18,7 +19,7 @@ compinit
 # End of lines added by compinstall
 
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
-alias vim="nvim"
+alias vim="nvim.appimage"
 alias l="ls -la"
 
 alias zs="source ~/.zshrc"
