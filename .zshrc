@@ -18,6 +18,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim.appimage"
 alias l="ls -la"
@@ -27,6 +29,8 @@ alias zz="vim ~/.zshrc"
 alias nn="vim ~/.config/nvim/init.vim"
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
+alias ii="vim ~/.config/i3/config"
+alias bb="vim ~/.config/i3status/config"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"

@@ -1,0 +1,25 @@
+# i3status configuration file.
+
+general {
+        colors = false
+        interval = 5
+}
+
+order += "volume master"
+order += "battery all"
+order += "tztime local"
+
+volume master {
+        format = "VOL:%volume"
+        format_muted = "VOL:%volume(muted)"
+        device = "pulse:0"
+}
+
+battery all {
+        format = "BAT:%percentage"
+}
+
+tztime local {
+        format = "%a %B %_d %I:%M%p"
+}
+

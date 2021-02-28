@@ -4,10 +4,10 @@ env:
 
 window:
   padding:
-    x: 0
-    y: 5
+    x: 3
+    y: 3
 
-background_opacity: 1.0
+background_opacity: 0.9
 
 # Font configuration
 font:
