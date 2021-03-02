@@ -17,6 +17,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim.appimage"
 alias l="ls -la"
