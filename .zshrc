@@ -1,6 +1,5 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export PATH=$PATH:/usr/local/go/bin
-# export BAT_THEME="OneHalfDark"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
@@ -27,6 +26,8 @@ alias zz="vim ~/.zshrc"
 alias nn="vim ~/.config/nvim/init.vim"
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
+alias ii="vim ~/.config/i3/config"
+alias bb="vim ~/.config/i3status/config"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
