@@ -39,3 +39,7 @@ require('el').setup {
     }
   end
 }
+
+-- Lsp config
+local on_attach = require'completion'.on_attach
+require'lspconfig'.tsserver.setup{ on_attach=on_attach }
