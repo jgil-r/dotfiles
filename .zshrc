@@ -1,5 +1,8 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-export PATH=$PATH:/usr/local/go/bin
+# export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/go
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:/usr/local/go/bin:$GOBIN"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
@@ -26,6 +29,8 @@ alias zz="vim ~/.zshrc"
 alias nn="vim ~/.config/nvim/init.vim"
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
+alias xx="vim ~/.xmonad/xmonad.hs"
+alias xb="vim ~/.config/xmobar/xmobar.config"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
