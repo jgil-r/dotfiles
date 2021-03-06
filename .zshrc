@@ -25,7 +25,7 @@ alias l="ls -la"
 
 alias zs="source ~/.zshrc"
 alias zz="vim ~/.zshrc"
-alias nn="vim ~/.config/nvim/init.vim"
+alias nn="vim ~/.config/nvim"
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
 
