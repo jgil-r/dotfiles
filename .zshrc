@@ -1,4 +1,5 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
