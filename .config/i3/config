@@ -7,6 +7,7 @@ font pango:JetBrains Mono 8
 exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpapers/dark_mnt.png
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id compton
+exec --no-startup-id blueman-applet
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -31,6 +32,9 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+
+# start a browser
+bindsym $mod+b exec brave-browser
 
 # kill focused window
 bindsym $mod+Shift+q kill

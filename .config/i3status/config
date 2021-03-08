@@ -11,9 +11,11 @@ order += "wireless _first_"
 order += "tztime local"
 
 volume master {
-        format = "VOL:%volume "
-        format_muted = "VOL:%volume (muted) "
-        device = "pulse:0"
+        format = "VOL:%volume"
+        format_muted = "VOL:%volume (muted)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
 
 battery 1 {
