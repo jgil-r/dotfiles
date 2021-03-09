@@ -16,7 +16,7 @@ style = "white"
 
 [git_branch]
 format = '\([$branch]($style)\)'
-style = "bold red"
+style = "red"
 
 [character]
 disabled = true

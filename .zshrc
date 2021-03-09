@@ -28,10 +28,10 @@ alias l="ls -la"
 
 alias zs="source ~/.zshrc"
 alias zz="vim ~/.zshrc"
-alias nn="vim ~/.config/nvim"
-alias n="vim ~/Documents/notes"
+alias n="vim ~/.config/nvim"
+alias nn="vim ~/.config/nvim/init.vim"
+alias todo="vim ~/Documents/notes"
 alias st="vim ~/.config/starship/starship.toml"
-alias aa="vim ~/.config/alacritty/alacritty.yml"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"

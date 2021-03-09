@@ -62,6 +62,9 @@ call plug#end()
 lua require('init')
 
 colorscheme base16-tomorrow-night
+highlight Normal ctermfg=7 ctermbg=none guifg=#c5c8c6 guibg=normal
+highlight CursorLine ctermbg=none guibg=none
+highlight CursorLineNr cterm=bold ctermfg=3 ctermbg=none gui=bold guifg=#f0c674 guibg=none
 highlight LineNr ctermfg=8 ctermbg=none guifg=#969896 guibg=none
 highlight SignColumn ctermfg=8 ctermbg=none guifg=#969896 guibg=none
 highlight MatchParen ctermbg=240 guibg=#5b5d5b
