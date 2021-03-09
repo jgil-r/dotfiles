@@ -30,11 +30,15 @@ alias n="vim ~/.config/nvim"
 alias nn="vim ~/.config/nvim/init.vim"
 alias todo="vim ~/Documents/notes"
 alias st="vim ~/.config/starship/starship.toml"
+alias ii="vim ~/.config/i3/config"
+alias ib="vim ~/.config/i3status/config"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
 alias ta="tmux -u -f $TMUX_CONFIG attach"
 alias tt="vim $TMUX_CONFIG"
+
+alias debins="sudo gdebi-gtk"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
