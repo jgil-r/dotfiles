@@ -2,6 +2,7 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
+export PATH="$HOME/neovim/bin:$PATH"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
@@ -19,9 +20,12 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
 alias l="ls -la"
+alias debins="sudo gdebi"
 
 alias zs="source ~/.zshrc"
 alias zz="vim ~/.zshrc"
@@ -31,6 +35,9 @@ alias nn="vim ~/.config/nvim/init.vim"
 
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
+
+alias xx="vim ~/.xmonad/xmonad.hs"
+alias xb="vim ~/.xmonad/xmobar.config"
 
 alias todo="vim ~/Documents/notes"
 
