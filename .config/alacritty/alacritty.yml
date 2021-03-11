@@ -2,12 +2,12 @@
 
 env:
   TERM: alacritty
-  WINIT_X11_SCALE_FACTOR: "1"
+  #WINIT_X11_SCALE_FACTOR: "1"
 
 window:
   padding:
-    x: 3
-    y: 3
+    x: 0
+    y: 0
 
   decorations: full
 
@@ -66,7 +66,7 @@ colors:
     white:   '#eaeaea'
 
 # Background opacity
-background_opacity: 0.85
+background_opacity: 1.0
 
 # Live config reload (changes require restart)
 live_config_reload: true
