@@ -32,6 +32,9 @@ alias nn="vim ~/.config/nvim/init.vim"
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
 
+alias ii="vim ~/.config/i3/config"
+alias ib="vim ~/.config/i3/i3status.conf"
+
 alias todo="vim ~/Documents/notes"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
