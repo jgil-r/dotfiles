@@ -66,6 +66,11 @@ highlight LineNr ctermfg=8 ctermbg=none guifg=#969896 guibg=none
 highlight SignColumn ctermfg=8 ctermbg=none guifg=#969896 guibg=none
 highlight MatchParen ctermbg=240 guibg=#5b5d5b
 
+highlight LspDiagnosticsUnderlineError cterm=none gui=none guisp=Red
+highlight LspDiagnosticsUnderlineHint cterm=none gui=none guisp=LightGrey
+highlight LspDiagnosticsUnderlineInformation cterm=none gui=none guisp=LightBlue
+highlight LspDiagnosticsUnderlineWarning cterm=none gui=none guisp=Orange
+
 " Prettier
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
