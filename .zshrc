@@ -22,6 +22,7 @@ compinit
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
 alias l="ls -la"
+alias bag="sudo pacman -Qtdq | sudo pacman -Rns -"
 
 alias zs="source ~/.zshrc"
 alias zz="vim ~/.zshrc"
