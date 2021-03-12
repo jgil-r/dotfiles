@@ -35,13 +35,7 @@ set termguicolors
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install',
-  \ 'for': ['javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'nvim-lua/plenary.nvim'
@@ -64,13 +58,3 @@ colorscheme base16-tomorrow-night
 highlight LineNr ctermfg=8 ctermbg=none guifg=#969896 guibg=none
 highlight SignColumn ctermfg=8 ctermbg=none guifg=#969896 guibg=none
 highlight MatchParen ctermbg=240 guibg=#5b5d5b
-
-highlight LspDiagnosticsUnderlineError cterm=none gui=none guisp=Red
-highlight LspDiagnosticsUnderlineHint cterm=none gui=none guisp=LightGrey
-highlight LspDiagnosticsUnderlineInformation cterm=none gui=none guisp=LightBlue
-highlight LspDiagnosticsUnderlineWarning cterm=none gui=none guisp=Orange
-
-" Prettier
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-let g:prettier#autoformat_config_present = 1
