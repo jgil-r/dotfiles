@@ -44,6 +44,8 @@ Plug 'tjdevries/express_line.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'fnune/base16-vim'
+Plug 'tjdevries/colorbuddy.vim'
+Plug 'tjdevries/gruvbuddy.nvim'
 
 Plug 'sheerun/vim-polyglot'
 
@@ -54,7 +56,9 @@ call plug#end()
 
 lua require('init')
 
-colorscheme base16-tomorrow-night
-highlight LineNr ctermfg=8 ctermbg=none guifg=#969896 guibg=none
-highlight SignColumn ctermfg=8 ctermbg=none guifg=#969896 guibg=none
-highlight MatchParen ctermbg=240 guibg=#5b5d5b
+lua require('colorbuddy').colorscheme('gruvbuddy')
+
+" colorscheme base16-tomorrow-night
+" highlight LineNr ctermfg=8 ctermbg=none guifg=#969896 guibg=none
+" highlight SignColumn ctermfg=8 ctermbg=none guifg=#969896 guibg=none
+" highlight MatchParen ctermbg=240 guibg=#5b5d5b
