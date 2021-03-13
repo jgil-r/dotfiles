@@ -44,8 +44,13 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'tjdevries/express_line.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-Plug 'fnune/base16-vim'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npm install',
+  \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
+Plug 'cohama/lexima.vim'
 
+Plug 'fnune/base16-vim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
@@ -65,3 +70,10 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+" vim-prettier
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
+" autostart nvim-lsp on new buffers
+nnoremap <leader>ast <cmd>lua require('lspconfig').tsserver.autostart()<cr>
