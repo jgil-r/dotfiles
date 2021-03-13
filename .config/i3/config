@@ -25,7 +25,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # start browser
-bindsym $mod+b exec brave-browser
+bindsym $mod+b exec brave
 
 # kill focused window
 bindsym $mod+Shift+q kill
