@@ -190,6 +190,9 @@ bar {
 
 default_border pixel 2
 
+gaps inner 5
+gaps outer 5
+
 client.focused          #333333 #333333 #ffffff #333333 #333333
 client.focused_inactive #333333 #222222 #888888 #292d2e #222222
 client.unfocused        #333333 #222222 #888888 #292d2e #222222
