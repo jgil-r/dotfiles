@@ -36,7 +36,7 @@ alias aa="vim ~/.config/alacritty/alacritty.yml"
 alias ii="vim ~/.config/i3/config"
 alias ib="vim ~/.config/i3/i3status.conf"
 
-alias todo="vim ~/Documents/notes"
+alias todo="vim ~/notes"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
