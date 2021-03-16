@@ -22,7 +22,6 @@ compinit
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
 alias l="ls -la"
-alias bag="sudo pacman -Qtdq | sudo pacman -Rns -"
 
 alias zs="source ~/.zshrc"
 alias zz="vim ~/.zshrc"
@@ -33,10 +32,7 @@ alias nn="vim ~/.config/nvim/init.vim"
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
 
-alias ii="vim ~/.config/i3/config"
-alias ib="vim ~/.config/i3/i3status.conf"
-
-alias todo="vim ~/notes"
+alias todo="vim ~/Documents/notes"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
