@@ -2,8 +2,9 @@
 
 Custom config files for:
 
-- zsh
-- alacritty
-- neovim
-- tmux
-- starship
+-   zsh
+-   alacritty
+-   neovim
+-   tmux
+-   starship
+-   i3
