@@ -32,6 +32,7 @@ set splitright
 set splitright
 set autowrite
 set termguicolors
+set wrap
 
 call plug#begin('~/.config/nvim/plugged')
 
