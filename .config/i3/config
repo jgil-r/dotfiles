@@ -29,12 +29,14 @@ floating_modifier $mod
 
 bindsym $mod+Return exec alacritty
 bindsym $mod+B exec brave
+bindsym $mod+Shift+s flatpak run com.spotify.Client
+bindsym $mod+Shift+d flatpak run flatpak run com.discordapp.Discord
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+m exec --no-startup-id dmenu_run -fn 'JetBrains Mono-10' -nb '#000000' -nf '#ffffff' -sb '#ffffff' -sf '#000000'
 
 # change focus
 bindsym $mod+j focus left
