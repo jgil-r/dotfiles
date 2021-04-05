@@ -29,8 +29,6 @@ floating_modifier $mod
 
 bindsym $mod+Return exec alacritty
 bindsym $mod+B exec brave
-bindsym $mod+Shift+s flatpak run com.spotify.Client
-bindsym $mod+Shift+d flatpak run flatpak run com.discordapp.Discord
 
 # kill focused window
 bindsym $mod+Shift+q kill
