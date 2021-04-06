@@ -1,5 +1,4 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-export PATH="$HOME/neovim/bin:$PATH"
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
@@ -19,8 +18,6 @@ zstyle :compinstall filename '/home/chuy/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
-fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
