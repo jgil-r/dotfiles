@@ -7,3 +7,4 @@ Custom config files for:
 -   neovim
 -   tmux
 -   starship
+-   i3
