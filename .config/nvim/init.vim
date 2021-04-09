@@ -45,7 +45,6 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'tjdevries/express_line.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
