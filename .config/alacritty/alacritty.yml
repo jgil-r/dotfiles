@@ -29,39 +29,41 @@ font:
 
   size: 12.0
 
-# Colors (Tomorrow Night)
+# Colors (Nord)
 colors:
   primary:
-    background: '#1d1f21'
-    foreground: '#c5c8c6'
+     background: '#2E3440'
+     foreground: '#D8DEE9'
 
   cursor:
-    text: '#1d1f21'
-    cursor: '#c5c8c6'
+    text: '#2E3440'
+    cursor: '#D8DEE9'
 
   selection:
-    text: '#1d1f21'
-    background: '#c5c8c6'
+    text: '#2E3440'
+    background: '#D8DEE9'
 
+  # Normal colors
   normal:
-    black:   '#1d1f21'
-    red:     '#cc6666'
-    green:   '#b5bd68'
-    yellow:  '#f0c674'
-    blue:    '#81a2be'
-    magenta: '#b294bb'
-    cyan:    '#8abeb7'
-    white:   '#c5c8c6'
+     black:   '#3B4252'
+     red:     '#BF616A'
+     green:   '#A3BE8C'
+     yellow:  '#EBCB8B'
+     blue:    '#81A1C1'
+     magenta: '#B48EAD'
+     cyan:    '#88C0D0'
+     white:   '#E5E9F0'
 
+   # Bright colors
   bright:
-    black:   '#666666'
-    red:     '#d54e53'
-    green:   '#b9ca4a'
-    yellow:  '#e7c547'
-    blue:    '#7aa6da'
-    magenta: '#c397d8'
-    cyan:    '#70c0b1'
-    white:   '#eaeaea'
+     black:   '#4C566A'
+     red:     '#BF616A'
+     green:   '#A3BE8C'
+     yellow:  '#EBCB8B'
+     blue:    '#81A1C1'
+     magenta: '#B48EAD'
+     cyan:    '#8FBCBB'
+     white:   '#ECEFF4'
 
 # Background opacity
 background_opacity: 1.0
