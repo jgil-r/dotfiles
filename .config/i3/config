@@ -31,6 +31,12 @@ bindsym $mod+Return exec alacritty
 # start browser
 bindsym $mod+b exec brave-browser
 
+# start spotify
+bindsym $mod+Shift+s exec flatpak run com.spotify.Client
+
+# start discord
+bindsym $mod+Shift+d exec flatpak run com.discordapp.Discord
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
