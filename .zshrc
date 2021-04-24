@@ -1,4 +1,5 @@
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export PATH="$HOME/neovim/bin:$PATH"
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
@@ -19,6 +20,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
 alias l="ls -la"
@@ -31,8 +34,6 @@ alias nn="vim ~/.config/nvim/init.vim"
 
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
-alias todo="sudo /usr/local/bin/Obsidian-0.11.13.AppImage"
-alias rt="$HOME/touchpad.sh"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
