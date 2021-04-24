@@ -31,7 +31,7 @@ alias nn="vim ~/.config/nvim/init.vim"
 
 alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
-alias todo="vim ~/notes"
+alias todo="sudo /usr/local/bin/Obsidian-0.11.13.AppImage"
 alias rt="$HOME/touchpad.sh"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
