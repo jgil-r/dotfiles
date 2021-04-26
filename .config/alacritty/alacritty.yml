@@ -66,7 +66,7 @@ colors:
     white:   '#282a2e'
 
 # Background opacity
-background_opacity: 0.9
+background_opacity: 0.85
 
 # Live config reload (changes require restart)
 live_config_reload: true
