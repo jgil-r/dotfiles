@@ -36,6 +36,7 @@ set wrap
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'dense-analysis/ale'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -71,6 +72,13 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+" Ale
+let g:ale_fixers = {
+ \ 'javascript': ['eslint']
+ \ }
+ 
+let g:ale_fix_on_save = 1
 
 " vim-prettier
 let g:prettier#autoformat = 1
