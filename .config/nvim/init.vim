@@ -32,7 +32,7 @@ set splitright
 set splitright
 set autowrite
 set termguicolors
-set wrap
+set signcolumn=yes
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -62,8 +62,6 @@ call plug#end()
 lua require('init')
 
 colorscheme base16-tomorrow-night
-highlight LineNr ctermfg=8 ctermbg=none guifg=#969896 guibg=none
-highlight SignColumn ctermfg=8 ctermbg=none guifg=#969896 guibg=none
 highlight MatchParen ctermbg=240 guibg=#5b5d5b
 
 inoremap <silent><expr> <C-Space> compe#complete()
