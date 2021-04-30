@@ -19,7 +19,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-alias config='/usr/bin/git --git-dir=/home/jg/.cfg/ --work-tree=/home/jg'
+alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
 alias l="ls -la"
 

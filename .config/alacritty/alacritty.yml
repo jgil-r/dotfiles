@@ -2,7 +2,7 @@
 
 env:
   TERM: alacritty
-  #WINIT_X11_SCALE_FACTOR: "1"
+  WINIT_X11_SCALE_FACTOR: "1"
 
 window:
   padding:
@@ -28,7 +28,7 @@ font:
     family: JetBrains Mono
     style: Bold Italic
 
-  size: 12.0
+  size: 11.0
 
 # Colors (Tomorrow Night)
 colors:
@@ -67,7 +67,7 @@ colors:
     white:   '#282a2e'
 
 # Background opacity
-background_opacity: 1.0
+background_opacity: 0.9
 
 # Live config reload (changes require restart)
 live_config_reload: true
