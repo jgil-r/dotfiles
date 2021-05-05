@@ -36,7 +36,7 @@ set signcolumn=yes
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -62,6 +62,7 @@ call plug#end()
 lua require('init')
 
 colorscheme base16-tomorrow-night
+highlight Normal ctermfg=7 ctermbg=none guifg=#c5c8c6 guibg=none
 highlight MatchParen ctermbg=240 guibg=#5b5d5b
 
 inoremap <silent><expr> <C-Space> compe#complete()
@@ -71,11 +72,11 @@ inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " Ale
-let g:ale_fixers = {
- \ 'javascript': ['eslint']
- \ }
+" let b:ale_fixers = {
+"  \ 'javascript': ['eslint']
+"  \ }
  
-let g:ale_fix_on_save = 1
+" let b:ale_fix_on_save = 1
 
 " vim-prettier
 let g:prettier#autoformat = 1
