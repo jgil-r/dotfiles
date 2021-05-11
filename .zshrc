@@ -1,5 +1,3 @@
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-export PATH="$HOME/neovim/bin:$PATH"
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
@@ -20,8 +18,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-fpath+=${ZDOTDIR:-~}/.zsh_functions
-
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
 alias l="ls -la"
@@ -32,7 +28,6 @@ alias zz="vim ~/.zshrc"
 alias n="vim ~/.config/nvim"
 alias nn="vim ~/.config/nvim/init.vim"
 
-alias st="vim ~/.config/starship/starship.toml"
 alias aa="vim ~/.config/alacritty/alacritty.yml"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
@@ -42,5 +37,3 @@ alias tt="vim $TMUX_CONFIG"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-eval "$(starship init zsh)"
