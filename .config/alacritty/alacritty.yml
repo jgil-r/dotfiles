@@ -6,8 +6,8 @@ env:
 
 window:
   padding:
-    x: 0
-    y: 0
+    x: 3
+    y: 3
   #decorations: none
 
 # Font configuration
