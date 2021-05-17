@@ -51,7 +51,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
 Plug 'cohama/lexima.vim'
 
-Plug 'fnune/base16-vim'
+Plug 'shaunsingh/nord.nvim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
@@ -61,11 +61,7 @@ call plug#end()
 
 lua require('init')
 
-colorscheme base16-tomorrow-night
-" highlight Normal ctermfg=7 ctermbg=none guifg=#c5c8c6 guibg=none
-" highlight LineNr ctermfg=8 ctermbg=none guifg=#969896 guibg=none
-" highlight SignColumn ctermfg=8 ctermbg=none guifg=#969896 guibg=none
-highlight MatchParen ctermbg=240 guibg=#5b5d5b
+colorscheme nord
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
