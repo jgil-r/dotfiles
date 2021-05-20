@@ -21,7 +21,7 @@ window:
     x: 3
     y: 3
   
-  decorations: none
+  # decorations: none
 
 # Font configuration
 font:
