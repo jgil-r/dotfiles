@@ -62,6 +62,8 @@ call plug#end()
 lua require('init')
 
 colorscheme nord
+highlight Normal guifg=#D8DEE9 guibg=none
+highlight SignColumn ctermfg=14 ctermbg=none guifg=#D8DEE9 guibg=none
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')

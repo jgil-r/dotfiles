@@ -5,7 +5,7 @@ env:
   WINIT_X11_SCALE_FACTOR: "1"
 
 # Background opacity
-background_opacity: 1.0
+background_opacity: 0.9
 
 # Live config reload (changes require restart)
 live_config_reload: true
@@ -18,8 +18,8 @@ shell:
 
 window:
   padding:
-    x: 3
-    y: 3
+    x: 0
+    y: 0
   
   # decorations: none
 
