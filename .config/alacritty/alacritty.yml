@@ -5,7 +5,7 @@ env:
   WINIT_X11_SCALE_FACTOR: "1"
 
 # Background opacity
-background_opacity: 0.9
+background_opacity: 0.8
 
 # Live config reload (changes require restart)
 live_config_reload: true
