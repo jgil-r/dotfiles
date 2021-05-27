@@ -101,7 +101,7 @@ set $ws10 "10"
 
 workspace $ws1 output eDP
 workspace $ws2 output HDMI-A-0
-workspace $ws3 output HDMI-A-0
+workspace $ws3 output eDP
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
