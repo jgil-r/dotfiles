@@ -61,9 +61,6 @@ call plug#end()
 lua require('init')
 
 colorscheme base16-tomorrow-night
-highlight Normal ctermfg=7 ctermbg=none guifg=#c5c8c6 guibg=none
-highlight SignColumn ctermfg=8 ctermbg=0 guifg=#969896 guibg=none
-highlight LineNr ctermfg=8 ctermbg=0 guifg=#969896 guibg=none
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')

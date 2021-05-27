@@ -1,4 +1,17 @@
-PS1="[%~]$ "
+function git_branch_name()
+{
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo '('$branch')'
+  fi
+}
+
+setopt prompt_subst
+
+export PS1="[%~]\$(git_branch_name)$ "
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
@@ -30,8 +43,6 @@ alias n="vim ~/.config/nvim"
 alias nn="vim ~/.config/nvim/init.vim"
 
 alias aa="vim ~/.config/alacritty/alacritty.yml"
-alias ii="vim ~/.config/i3"
-alias dualm="xrandr --output eDP --primary --output HDMI-A-0 --auto --above eDP"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
