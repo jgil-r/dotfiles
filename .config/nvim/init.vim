@@ -61,6 +61,7 @@ call plug#end()
 lua require('init')
 
 colorscheme base16-tomorrow-night
+highlight MatchParen ctermbg=240 guibg=#5b5d5b
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
@@ -74,6 +75,7 @@ let g:prettier#autoformat_require_pragma = 0
 
 " autostart nvim-lsp on new buffers
 nnoremap <leader>ast <cmd>lua require('lspconfig').tsserver.autostart()<cr>
+nnoremap <leader>asg <cmd>lua require('lspconfig').gopls.autostart()<cr>
 
 " Go
 let g:go_list_type = "quickfix"
