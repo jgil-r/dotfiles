@@ -5,7 +5,7 @@ function git_branch_name()
   then
     :
   else
-    echo '('$branch')'
+    echo '('%F{red}$branch%f')'
   fi
 }
 
