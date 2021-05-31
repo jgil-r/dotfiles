@@ -6,3 +6,4 @@ Custom config files for:
 -   alacritty
 -   neovim
 -   tmux
+-   i3
