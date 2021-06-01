@@ -43,8 +43,6 @@ alias n="vim ~/.config/nvim"
 alias nn="vim ~/.config/nvim/init.vim"
 
 alias aa="vim ~/.config/alacritty/alacritty.yml"
-alias ii="vim ~/.config/i3/"
-alias dualm="xrandr --output eDP --auto --primary --output HDMI-A-0 --auto --above eDP"
 
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
