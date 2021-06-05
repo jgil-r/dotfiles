@@ -12,6 +12,7 @@ function git_branch_name()
 setopt prompt_subst
 
 export PS1="[%~]\$(git_branch_name)$ "
+export PATH="$HOME/neovim/bin:$PATH"
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
@@ -51,3 +52,5 @@ alias tt="vim $TMUX_CONFIG"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions
