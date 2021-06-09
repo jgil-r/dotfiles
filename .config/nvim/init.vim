@@ -3,6 +3,7 @@ let mapleader = '\'
 syntax enable
 filetype plugin indent on
 
+set wildignore+=**/node_modules/*
 set number
 set autowrite
 set cursorline
@@ -44,13 +45,15 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'tjdevries/express_line.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
 Plug 'cohama/lexima.vim'
 
-Plug 'fnune/base16-vim'
+Plug 'tjdevries/colorbuddy.vim'
+Plug 'tjdevries/gruvbuddy.nvim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
@@ -60,8 +63,7 @@ call plug#end()
 
 lua require('init')
 
-colorscheme base16-tomorrow-night
-highlight MatchParen ctermbg=240 guibg=#5b5d5b
+lua require('colorbuddy').colorscheme('gruvbuddy')
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')

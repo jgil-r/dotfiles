@@ -10,10 +10,26 @@ local git_branch = subscribe.buf_autocmd(
   function(window, buffer)
     local branch = extensions.git_branch(window, buffer)
     if branch then
-      return ' ' .. branch
+      return " " .. extensions.git_icon() .. " " .. branch
     end
   end
 )
+
+local git_icon = subscribe.buf_autocmd("el_file_icon", "BufRead", function(_, bufnr)
+  local icon = extensions.file_icon(_, bufnr)
+  if icon then
+    return icon .. " "
+  end
+  return ""
+end)
+
+local function lsp_info()
+  local warnings = vim.lsp.diagnostic.get_count(0, "Warning")
+  local errors = vim.lsp.diagnostic.get_count(0, "Error")
+  local hints = vim.lsp.diagnostic.get_count(0, "Hint")
+
+  return string.format("LSP: H %d W %d E %d", hints, warnings, errors)
+end
 
 require('el').setup {
   generator = function(_, _)
@@ -24,9 +40,12 @@ require('el').setup {
       git_branch,
       ' ',
       sections.split,
+      git_icon,
       builtin.tail_file,
+      ' | ',
+      lsp_info,
       sections.split,
-      builtin.line, '/', builtin.number_of_lines,  ':', builtin.column, ' ',
+      '[', builtin.line, '/', builtin.number_of_lines,  ':', builtin.column, ']',
     }
   end
 }
@@ -110,3 +129,7 @@ vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+
+local opts = { noremap=true, silent=true }
+
+vim.api.nvim_set_keymap("n", "K", "v:lua vim.lsp.buf.hover()", opts)
