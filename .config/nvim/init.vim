@@ -64,6 +64,9 @@ call plug#end()
 lua require('init')
 
 lua require('colorbuddy').colorscheme('gruvbuddy')
+highlight Normal guifg=#e0e0e0 guibg=none guisp=none
+highlight LineNr guifg=#969896 guibg=none guisp=none
+highlight SignColumn guifg=#969896 guibg=none guisp=none
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
