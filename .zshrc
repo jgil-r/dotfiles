@@ -54,3 +54,5 @@ alias tt="vim $TMUX_CONFIG"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions
