@@ -12,7 +12,7 @@ function git_branch_name()
 setopt prompt_subst
 
 export PS1="[%~]\$(git_branch_name)$ "
-export PATH="$HOME/neovim/bin:$PATH"
+export EDITOR=/usr/bin/nvim
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
@@ -43,14 +43,8 @@ alias zz="vim ~/.zshrc"
 alias n="vim ~/.config/nvim"
 alias nn="vim ~/.config/nvim/init.vim"
 
-alias aa="vim ~/.config/alacritty/alacritty.yml"
-alias ii="vim ~/.config/i3"
+alias kk="vim ~/.config/kitty/kitty.conf"
 alias notes="vim ~/notes"
-
-TMUX_CONFIG="~/.config/tmux/.tmux.conf"
-alias tn="tmux -u -f $TMUX_CONFIG new"
-alias ta="tmux -u -f $TMUX_CONFIG attach"
-alias tt="vim $TMUX_CONFIG"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
