@@ -33,6 +33,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+kitty + complete setup zsh | source /dev/stdin
+
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
 alias l="ls -la"
