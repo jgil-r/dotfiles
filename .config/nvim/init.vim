@@ -63,6 +63,7 @@ call plug#end()
 lua require('init')
 
 colorscheme base16-tomorrow-night
+highlight MatchParen ctermbg=240 guibg=#5b5d5b
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
