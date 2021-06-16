@@ -54,6 +54,7 @@ require('el').setup {
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.cssls.setup{}
+require'lspconfig'.tailwindcss.setup{}
 require'lspconfig'.vimls.setup{}
 require'lspconfig'.jsonls.setup{
     commands = {
