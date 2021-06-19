@@ -135,6 +135,3 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 local opts = { noremap=true, silent=true }
 
 vim.api.nvim_set_keymap("n", "K", "v:lua vim.lsp.buf.hover()", opts)
-
-vim.g.gruvbox_flat_style = "hard"
-vim.cmd[[colorscheme gruvbox-flat]]
