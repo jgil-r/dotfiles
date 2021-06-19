@@ -47,7 +47,7 @@ alias n="vim ~/.config/nvim"
 alias nn="vim ~/.config/nvim/init.vim"
 
 alias kk="vim ~/.config/kitty/kitty.conf"
-alias notes="vim ~/notes"
+alias tt="vim ~/notes"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

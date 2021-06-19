@@ -40,6 +40,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'rust-lang/rust.vim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
@@ -53,6 +54,7 @@ Plug 'prettier/vim-prettier', {
 Plug 'cohama/lexima.vim'
 
 Plug 'fnune/base16-vim'
+Plug 'eddyekofo94/gruvbox-flat.nvim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
@@ -62,8 +64,14 @@ call plug#end()
 
 lua require('init')
 
-colorscheme base16-tomorrow-night
-highlight MatchParen ctermbg=240 guibg=#5b5d5b
+" colorscheme base16-tomorrow-night
+" highlight MatchParen ctermbg=240 guibg=#5b5d5b
+
+" gruvbox-flat theme 
+highlight LspDiagnosticsVirtualTextError guifg=#c14a4a guibg=none
+highlight LspDiagnosticsVirtualTextHint guifg=#89b482 guibg=none
+highlight LspDiagnosticsVirtualTextInformation guifg=#7daea3 guibg=none
+highlight LspDiagnosticsVirtualTextWarning guifg=#d8a657 guibg=none
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
@@ -101,3 +109,6 @@ endfunction
 
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+
+" Rust
+let g:rustfmt_autosave = 1

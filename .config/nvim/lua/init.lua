@@ -52,9 +52,10 @@ require('el').setup {
 
 -- Neovim lsp
 require'lspconfig'.gopls.setup{}
+require'lspconfig'.rust_analyzer.setup{}
+require'lspconfig'.clangd.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.cssls.setup{}
-require'lspconfig'.tailwindcss.setup{}
 require'lspconfig'.vimls.setup{}
 require'lspconfig'.jsonls.setup{
     commands = {
@@ -134,3 +135,6 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 local opts = { noremap=true, silent=true }
 
 vim.api.nvim_set_keymap("n", "K", "v:lua vim.lsp.buf.hover()", opts)
+
+vim.g.gruvbox_flat_style = "hard"
+vim.cmd[[colorscheme gruvbox-flat]]
