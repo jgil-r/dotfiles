@@ -53,7 +53,6 @@ require('el').setup {
 -- Neovim lsp
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.rust_analyzer.setup{}
-require'lspconfig'.clangd.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.cssls.setup{}
 require'lspconfig'.vimls.setup{}
