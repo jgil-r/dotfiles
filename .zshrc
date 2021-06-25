@@ -12,6 +12,7 @@ function git_branch_name()
 setopt prompt_subst
 
 export PS1="[%~]\$(git_branch_name)$ "
+export PATH="$HOME/neovim/bin:$PATH"
 export EDITOR=/usr/bin/nvim
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
