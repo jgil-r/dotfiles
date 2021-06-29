@@ -55,7 +55,6 @@ Plug 'cohama/lexima.vim'
 
 Plug 'tjdevries/colorbuddy.vim'
 Plug 'tjdevries/gruvbuddy.nvim'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
@@ -65,8 +64,7 @@ call plug#end()
 
 lua require('init')
 
-" lua require('colorbuddy').colorscheme('gruvbuddy')
-colorscheme onehalflight
+lua require('colorbuddy').colorscheme('gruvbuddy')
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
