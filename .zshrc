@@ -50,7 +50,7 @@ alias nn="vim $HOME/notes"
 TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
 alias ta="tmux -u -f $TMUX_CONFIG attach"
-alias tm="vim $TMUX_CONFIG"
+alias tt="vim $TMUX_CONFIG"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
