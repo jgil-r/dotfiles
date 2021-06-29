@@ -12,6 +12,7 @@ function git_branch_name()
 setopt prompt_subst
 
 export PS1="[%~]\$(git_branch_name)$ "
+export PATH="$HOME/neovim/bin:$PATH"
 export EDITOR=/usr/bin/nvim
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
@@ -33,20 +34,24 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-kitty + complete setup zsh | source /dev/stdin
-
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
 alias l="ls -la"
 
-alias zs="source ~/.zshrc"
-alias zz="vim ~/.zshrc"
+alias zs="source $HOME/.zshrc"
+alias zz="vim $HOME/.zshrc"
 
-alias n="vim ~/.config/nvim"
-alias nn="vim ~/.config/nvim/init.vim"
+alias n="vim $HOME/.config/nvim"
 
-alias kk="vim ~/.config/kitty/kitty.conf"
-alias tt="vim ~/notes"
+alias aa="vim $HOME/.config/alacritty/alacritty.yml"
+alias ii="vim $HOME/.config/i3"
+alias nn="vim $HOME/notes"
+
+TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
+alias tn="tmux -u -f $TMUX_CONFIG new"
+alias ta="tmux -u -f $TMUX_CONFIG attach"
+alias tm="vim $TMUX_CONFIG"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+fpath+=${ZDOTDIR:-~}/.zsh_functions

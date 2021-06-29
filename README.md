@@ -4,4 +4,5 @@ Custom config files for:
 
 -   zsh
 -   neovim
--   kitty
+-   alacritty
+-   tmux
