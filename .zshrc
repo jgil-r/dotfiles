@@ -13,6 +13,7 @@ setopt prompt_subst
 
 export PS1="[%~]\$(git_branch_name)$ "
 export PATH="$HOME/neovim/bin:$PATH"
+export PATH="$HOME/.local/bin/:$PATH"
 export EDITOR=/usr/bin/nvim
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
@@ -45,7 +46,7 @@ alias n="vim $HOME/.config/nvim"
 
 alias aa="vim $HOME/.config/alacritty/alacritty.yml"
 alias ii="vim $HOME/.config/i3"
-alias nn="vim $HOME/notes"
+alias todo="vim $HOME/todo"
 
 TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
