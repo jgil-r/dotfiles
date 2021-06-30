@@ -45,7 +45,6 @@ alias zz="vim $HOME/.zshrc"
 alias n="vim $HOME/.config/nvim"
 
 alias aa="vim $HOME/.config/alacritty/alacritty.yml"
-alias ii="vim $HOME/.config/i3"
 alias todo="vim $HOME/todo"
 
 TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
@@ -55,4 +54,3 @@ alias tt="vim $TMUX_CONFIG"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-fpath+=${ZDOTDIR:-~}/.zsh_functions
