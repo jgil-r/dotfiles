@@ -53,8 +53,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
 Plug 'cohama/lexima.vim'
 
-Plug 'tjdevries/colorbuddy.vim'
-Plug 'tjdevries/gruvbuddy.nvim'
+Plug 'fnune/base16-vim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
@@ -64,7 +63,8 @@ call plug#end()
 
 lua require('init')
 
-lua require('colorbuddy').colorscheme('gruvbuddy')
+colorscheme base16-tomorrow-night
+highlight MatchParen ctermbg=240 guibg=#5b5d5b
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')

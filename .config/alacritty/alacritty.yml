@@ -43,23 +43,23 @@ font:
 
 colors:
   primary:
-    background: '#282c34'
-    foreground: '#e0e0e0'
+    background: '#1d1f21'
+    foreground: '#c5c8c6'
 
   cursor:
-    text: '#282c34'
-    cursor: '#e0e0e0'
+    text: '#1d1f21'
+    cursor: '#c5c8c6'
 
   selection:
     text: CellForeground
-    background: '#666666'
+    background: '#373b41'
 
   normal:
     black:   '#1d1f21'
     red:     '#cc6666'
-    green:   '#99cc99'
-    yellow:  '#f8fe7a'
+    green:   '#b5bd68'
+    yellow:  '#f0c674'
     blue:    '#81a2be'
     magenta: '#b294bb'
     cyan:    '#8abeb7'
-    white:   '#f2e5bc'
+    white:   '#c5c8c6'
