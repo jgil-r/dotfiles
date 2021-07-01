@@ -58,6 +58,7 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -105,3 +106,19 @@ autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
 " Rust
 let g:rustfmt_autosave = 1
+
+" Startify
+let g:startify_lists = [
+  \ { 'type': 'bookmarks', 'header': ['   ---']      },
+  \ ]
+
+let g:startify_bookmarks = [
+  \ { '0': '$HOME/notes' },
+  \ { '1': '$HOME/.zshrc' },
+  \ { '2': '$HOME/.config/alacritty/alacritty.yml' },
+  \ { '3': '$HOME/.config/tmux/.tmux.conf' },
+  \ { '4': '$HOME/.config/nvim' },
+  \ { '5': '$HOME/.config/starship/starship.toml' },
+  \ ]
+
+let g:startify_custom_header = ["   Bookmarks"]

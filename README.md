@@ -6,3 +6,4 @@ Custom config files for:
 -   neovim
 -   alacritty
 -   tmux
+-   starship

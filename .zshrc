@@ -1,21 +1,7 @@
-function git_branch_name()
-{
-  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
-  if [[ $branch == "" ]];
-  then
-    :
-  else
-    echo '('%F{red}$branch%f')'
-  fi
-}
-
-setopt prompt_subst
-
-export PS1="[%~]\$(git_branch_name)$ "
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 export PATH="$HOME/neovim/bin:$PATH"
 export PATH="$HOME/.local/bin/:$PATH"
-export EDITOR=/usr/bin/nvim
-export GOPATH=~/go
+export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
 
@@ -38,19 +24,13 @@ compinit
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
 alias l="ls -la"
-
 alias zs="source $HOME/.zshrc"
-alias zz="vim $HOME/.zshrc"
-
-alias n="vim $HOME/.config/nvim"
-
-alias aa="vim $HOME/.config/alacritty/alacritty.yml"
-alias nn="vim $HOME/notes"
 
 TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
 alias ta="tmux -u -f $TMUX_CONFIG attach"
-alias tt="vim $TMUX_CONFIG"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+eval "$(starship init zsh)"
