@@ -45,7 +45,7 @@ alias zz="vim $HOME/.zshrc"
 alias n="vim $HOME/.config/nvim"
 
 alias aa="vim $HOME/.config/alacritty/alacritty.yml"
-alias todo="vim $HOME/todo"
+alias nn="vim $HOME/notes"
 
 TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
 alias tn="tmux -u -f $TMUX_CONFIG new"
