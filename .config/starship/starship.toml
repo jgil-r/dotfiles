@@ -19,8 +19,8 @@ disabled = true
 disabled = true
 
 [character]
-success_symbol = "[➜](bold white) "
-error_symbol = "[➜](bold red) "
+success_symbol = "[➜](bold white)"
+error_symbol = "[➜](bold red)"
 
 [git_branch]
 format = "[$symbol$branch]($style) "
