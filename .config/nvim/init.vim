@@ -113,12 +113,13 @@ let g:startify_lists = [
   \ ]
 
 let g:startify_bookmarks = [
-  \ { '0': '$HOME/notes' },
+  \ { 'n': '$HOME/notes' },
+  \ { 'v': '$HOME/.config/nvim' },
+  \ { 'i': '$HOME/.config/i3' },
   \ { '1': '$HOME/.zshrc' },
   \ { '2': '$HOME/.config/alacritty/alacritty.yml' },
   \ { '3': '$HOME/.config/tmux/.tmux.conf' },
-  \ { '4': '$HOME/.config/nvim' },
-  \ { '5': '$HOME/.config/starship/starship.toml' },
+  \ { '4': '$HOME/.config/starship/starship.toml' },
   \ ]
 
 let g:startify_custom_header = ["   Bookmarks"]
