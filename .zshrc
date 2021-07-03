@@ -23,7 +23,7 @@ compinit
 
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
-alias l="ls -la"
+alias l="ls -AC"
 alias zs="source $HOME/.zshrc"
 
 TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
