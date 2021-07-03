@@ -1,6 +1,7 @@
 format = """
+$username\
+$hostname\
 $directory\
-$git_branch\
 $git_commit\
 $git_state\
 $git_status\
@@ -8,9 +9,20 @@ $character"""
 
 add_newline = false
 
-[directory]
-style = "bold white"
+[username]
+format = "[$user@]($style)"
+show_always = true
 
+[hostname]
+format = "[$hostname:]($style)"
+ssh_only = false
+style = "bold yellow"
+
+[directory]
+format = "[$path]($style)"
+style = "white"
+truncation_length = 15
+truncate_to_repo = false
 
 [line_break]
 disabled = true
@@ -19,9 +31,8 @@ disabled = true
 disabled = true
 
 [character]
-success_symbol = "[➜](bold white)"
-error_symbol = "[➜](bold red)"
+success_symbol = "[\\$](white)"
+error_symbol = "[\\$](red)"
 
-[git_branch]
-format = "[$symbol$branch]($style) "
-style = "red"
+[git_status]
+format = '([$all_status$ahead_behind]($style))'
