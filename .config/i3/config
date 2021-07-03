@@ -70,7 +70,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -196,8 +196,8 @@ default_border pixel 2
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #333333 #333333 #c5c8c6 #333333 #333333
-client.focused_inactive #1d1f21 #1d1f21 #888888 #1d1f21 #1d1f21
-client.unfocused        #1d1f21 #1d1f21 #888888 #1d1f21 #1d1f21
+client.focused_inactive #333333 #1d1f21 #444444 #1d1f21 #1d1f21
+client.unfocused        #333333 #1d1f21 #444444 #1d1f21 #1d1f21
 client.urgent           #cc6666 #cc6666 #c5c8c6 #cc6666 #cc6666
 client.placeholder      #1d1f21 #1d1f21 #c5c8c6 #1d1f21 #1d1f21
 
