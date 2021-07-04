@@ -54,6 +54,7 @@ Plug 'prettier/vim-prettier', {
 Plug 'cohama/lexima.vim'
 
 Plug 'fnune/base16-vim'
+Plug 'marko-cerovac/material.nvim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
@@ -64,8 +65,8 @@ call plug#end()
 
 lua require('init')
 
-colorscheme base16-tomorrow-night
-highlight MatchParen ctermbg=240 guibg=#5b5d5b
+" colorscheme base16-tomorrow-night
+" highlight MatchParen ctermbg=240 guibg=#5b5d5b
 
 " NOTE: Order is important. You can't lazy loading lexima.vim.
 let g:lexima_no_default_rules = v:true
@@ -123,6 +124,7 @@ let g:startify_bookmarks = [
   \ { '2': '$HOME/.config/alacritty/alacritty.yml' },
   \ { '3': '$HOME/.config/tmux/.tmux.conf' },
   \ { '4': '$HOME/.config/starship/starship.toml' },
+  \ { '5': '$HOME/.config/nvim/init.vim' },
   \ ]
 
 let g:startify_custom_header = ["   Bookmarks"]

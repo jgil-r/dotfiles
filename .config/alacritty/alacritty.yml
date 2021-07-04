@@ -43,8 +43,8 @@ font:
 
 colors:
   primary:
-    background: '#1d1f21'
-    foreground: '#c5c8c6'
+    background: '#212121'
+    foreground: '#B0BEC5'
 
   cursor:
     text: '#1d1f21'
