@@ -7,4 +7,3 @@ Custom config files for:
 -   alacritty
 -   tmux
 -   starship
--   i3
