@@ -117,8 +117,8 @@ let g:startify_lists = [
   \ ]
 
 let g:startify_bookmarks = [
-  \ { 'n': '$HOME/notes' },
-  \ { 'v': '$HOME/.config/nvim' },
+  \ { 'n': '$HOME/.config/nvim' },
+  \ { '0': '$HOME/notes' },
   \ { '1': '$HOME/.zshrc' },
   \ { '2': '$HOME/.config/alacritty/alacritty.yml' },
   \ { '3': '$HOME/.config/tmux/.tmux.conf' },
