@@ -18,8 +18,9 @@ shell:
 
 window:
   padding:
-    x: 0
-    y: 0
+    x: 5
+    y: 5
+  #decorations: none
   
 # Font configuration
 font:
