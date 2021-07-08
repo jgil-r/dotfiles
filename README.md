@@ -7,7 +7,6 @@ Custom config files for:
 -   alacritty
 -   tmux
 -   starship
--   i3
 
 To Install on new system (**ONLY FOR ME**)
 
