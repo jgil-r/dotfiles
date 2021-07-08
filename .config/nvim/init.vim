@@ -53,8 +53,8 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
 Plug 'cohama/lexima.vim'
 
-Plug 'fnune/base16-vim'
-Plug 'marko-cerovac/material.nvim'
+Plug 'tjdevries/colorbuddy.vim'
+Plug 'tjdevries/gruvbuddy.nvim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
@@ -65,8 +65,7 @@ call plug#end()
 
 lua require('init')
 
-" colorscheme base16-tomorrow-night
-" highlight MatchParen ctermbg=240 guibg=#5b5d5b
+lua require('colorbuddy').colorscheme('gruvbuddy')
 
 " NOTE: Order is important. You can't lazy loading lexima.vim.
 let g:lexima_no_default_rules = v:true
