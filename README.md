@@ -8,7 +8,7 @@ Custom config files for:
 -   tmux
 -   starship
 
-To Install on new system (**ONLY FOR ME**)
+To Install on new system (**CUSTOM SETUP FOR ME, INSTALL AT YOUR OWN RISK**)
 
 -   Prior to the installation make sure you have committed the alias to .zshrc
 
