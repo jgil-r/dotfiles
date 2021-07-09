@@ -117,7 +117,6 @@ let g:startify_lists = [
 
 let g:startify_bookmarks = [
   \ { 'n': '$HOME/.config/nvim' },
-  \ { 'a': '$HOME/.config/awesome' },
   \ { '0': '$HOME/notes' },
   \ { '1': '$HOME/.zshrc' },
   \ { '2': '$HOME/.config/alacritty/alacritty.yml' },
