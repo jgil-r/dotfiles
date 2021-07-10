@@ -4,8 +4,6 @@ Custom config files for:
 
 -   zsh
 -   neovim
--   alacritty
--   tmux
 -   starship
 
 To Install on new system (**CUSTOM SETUP FOR ME, INSTALL AT YOUR OWN RISK**)
