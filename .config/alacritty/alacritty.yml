@@ -53,7 +53,7 @@ colors:
 
   selection:
     text: CellForeground
-    background: '#373b41'
+    background: '#e0e0e0'
 
   normal:
     black:   '#1d1f21'
