@@ -127,6 +127,7 @@ let g:startify_bookmarks = [
   \ { '1': '$HOME/.zshrc' },
   \ { '2': '$HOME/.config/starship/starship.toml' },
   \ { '3': '$HOME/.config/nvim/init.vim' },
+  \ { '4': '$HOME/.config/tmux/.tmux.conf' },
   \ ]
 
 let g:startify_custom_header = ["   Bookmarks"]

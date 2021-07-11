@@ -25,6 +25,10 @@ alias vim="nvim"
 alias l="ls -AC"
 alias zs="source $HOME/.zshrc"
 
+TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
+alias tn="tmux -u -f $TMUX_CONFIG new"
+alias ta="tmux -u -f $TMUX_CONFIG attach"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 

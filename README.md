@@ -5,6 +5,7 @@ Custom config files for:
 -   zsh
 -   neovim
 -   starship
+-   tmux
 
 To Install on new system (**CUSTOM SETUP FOR ME, INSTALL AT YOUR OWN RISK**)
 
