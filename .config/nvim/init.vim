@@ -55,6 +55,7 @@ Plug 'cohama/lexima.vim'
 
 Plug 'tjdevries/colorbuddy.vim'
 Plug 'tjdevries/gruvbuddy.nvim'
+Plug 'marko-cerovac/material.nvim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
@@ -65,7 +66,7 @@ call plug#end()
 
 lua require('init')
 
-lua require('colorbuddy').colorscheme('gruvbuddy')
+" lua require('colorbuddy').colorscheme('gruvbuddy')
 
 " NOTE: Order is important. You can't lazy loading lexima.vim.
 let g:lexima_no_default_rules = v:true
@@ -106,6 +107,11 @@ endfunction
 
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+
+nnoremap <leader>vd :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>vs :lua vim.lsp.buf.signature_help()<CR>
+nnoremap <leader>vh :lua vim.lsp.buf.hover()<CR>
+nnoremap <leader>vr :lua vim.lsp.buf.rename()<CR>
 
 " Rust
 let g:rustfmt_autosave = 1
