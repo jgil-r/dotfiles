@@ -33,8 +33,8 @@ disabled = true
 disabled = true
 
 [character]
-success_symbol = "[➜](white)"
-error_symbol = "[➜](red)"
+success_symbol = "[\\$](white)"
+error_symbol = "[\\$](red)"
 
 [git_branch]
 format = '[\([$branch](red)\)]($style)'
