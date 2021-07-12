@@ -1,5 +1,6 @@
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/neovim/bin:$PATH"
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
@@ -21,7 +22,7 @@ compinit
 # End of lines added by compinstall
 
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
-alias vim="nvim"
+alias v="nvim"
 alias l="ls -AC"
 alias zs="source $HOME/.zshrc"
 

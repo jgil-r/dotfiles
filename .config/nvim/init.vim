@@ -67,8 +67,6 @@ call plug#end()
 lua require('init')
 
 " lua require('colorbuddy').colorscheme('gruvbuddy')
-let g:material_style = 'darker'
-colorscheme material
 
 " NOTE: Order is important. You can't lazy loading lexima.vim.
 let g:lexima_no_default_rules = v:true
