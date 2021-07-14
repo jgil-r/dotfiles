@@ -62,8 +62,13 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# Get git branch if in git repo
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(parse_git_branch)\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -127,11 +132,11 @@ TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
 
 alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
 alias vim="nvim"
-alias l="ls -AC"
 alias bs="source $HOME/.bashrc"
 alias bb="vim $HOME/.bashrc"
 alias nn="vim $HOME/.config/nvim/init.vim"
 alias nd="vim $HOME/.config/nvim"
+alias nt="vim $HOME/notes"
 alias tt="vim $TMUX_CONFIG"
 alias tn="tmux -u -f $TMUX_CONFIG new"
 alias ta="tmux -u -f $TMUX_CONFIG attach"
@@ -139,4 +144,5 @@ alias ta="tmux -u -f $TMUX_CONFIG attach"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 . "$HOME/.cargo/env"
