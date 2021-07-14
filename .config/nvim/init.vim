@@ -28,7 +28,6 @@ set undofile
 set incsearch
 set scrolloff=15
 set noshowmode
-set completeopt=menuone,noselect
 set splitright
 set splitright
 set autowrite
@@ -53,20 +52,15 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
 Plug 'cohama/lexima.vim'
 
-Plug 'tjdevries/colorbuddy.vim'
-Plug 'tjdevries/gruvbuddy.nvim'
 Plug 'marko-cerovac/material.nvim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
-Plug 'mhinz/vim-startify'
 
 call plug#end()
 
 lua require('init')
-
-" lua require('colorbuddy').colorscheme('gruvbuddy')
 
 " NOTE: Order is important. You can't lazy loading lexima.vim.
 let g:lexima_no_default_rules = v:true
@@ -116,21 +110,12 @@ nnoremap <leader>vr :lua vim.lsp.buf.rename()<CR>
 " Rust
 let g:rustfmt_autosave = 1
 
-" Startify
-let g:startify_lists = [
-  \ { 'type': 'bookmarks', 'header': ['   ---']      },
-  \ ]
-
-let g:startify_bookmarks = [
-  \ { 'n': '$HOME/.config/nvim' },
-  \ { '0': '$HOME/notes' },
-  \ { '1': '$HOME/.zshrc' },
-  \ { '2': '$HOME/.config/starship/starship.toml' },
-  \ { '3': '$HOME/.config/nvim/init.vim' },
-  \ { '4': '$HOME/.config/tmux/.tmux.conf' },
-  \ ]
-
-let g:startify_custom_header = ["   Bookmarks"]
-
 " Custom remaps
 nmap <leader>qq <c-^><cr>
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+
+" Telescope
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>ll <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>ld <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
