@@ -1,33 +1,34 @@
-# Sample .bashrc for SUSE Linux
-# Copyright (c) SUSE Software Solutions Germany GmbH
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
 
-# There are 3 different types of shells in bash: the login shell, normal shell
-# and interactive shell. Login shells read ~/.profile and interactive shells
-# read ~/.bashrc; in our setup, /etc/profile sources ~/.bashrc - thus all
-# settings made here will also take effect in a login shell.
-#
-# NOTE: It is recommended to make language settings in ~/.profile rather than
-# here, since multilingual X sessions would not work properly if LANG is over-
-# ridden in every subshell.
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
 
 export PATH="$HOME/.local/bin/:$PATH"
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:/usr/local/go/bin:$GOBIN"
 
-# Get git branch if in git repo
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
+# ---------- Aliases ----------
+TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
 
-PS1='\u@\H:\W\e[0;31m$(parse_git_branch)\e[0m> '
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+alias config='/usr/bin/git --git-dir=/home/chuy/.cfg/ --work-tree=/home/chuy'
+alias vim="nvim"
+alias bs="source $HOME/.bashrc"
+alias bb="vim $HOME/.bashrc"
+alias nn="vim $HOME/.config/nvim/init.vim"
+alias nd="vim $HOME/.config/nvim"
+alias nt="vim $HOME/notes"
+alias tt="vim $TMUX_CONFIG"
+alias tn="tmux -u -f $TMUX_CONFIG new"
+alias ta="tmux -u -f $TMUX_CONFIG attach"
 
 export NVM_DIR="$HOME/.nvm"
 # This loads nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 # This loads nvm bash_completion
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
+
+. "$HOME/.cargo/env"
